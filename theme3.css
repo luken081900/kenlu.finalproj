@@ -1,0 +1,29 @@
+body {
+ background-image: url("app.jpg");
+ background-color: #cccccc;
+ background-repeat: no-repeat;
+ background-size: cover;
+ 
+}
+
+h1{
+	color: white;
+}
+
+h2{
+	color: white;
+}
+
+p{
+	color: black;
+}
+
+div{
+	text-align:center;
+}
+
+td{
+	font-size:50;
+}
+
+

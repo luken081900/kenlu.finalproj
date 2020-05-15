@@ -1,0 +1,97 @@
+<DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="theme3.css">
+
+<title>Application</title>
+<style>
+.mydiv {
+	background-color:black;
+	
+}
+
+</style>
+
+<script>
+function validateText()
+{
+	var fname= document.Registration.fname.value;
+	if (fname.length ==0) return false;
+	var phone= document.Registration.phone.value;
+	if (phone.length ==0) return false;
+	var lname= document.Registration.lname.value;
+	if (lname.length ==0) return false;
+	var email= document.Registration.email.value;
+	if (email.length ==0) return false;
+	var address= document.Registration.address.value;
+	if (address.length ==0) return false;
+	var state= document.Registration.state.value;
+	if (state.length ==0) return false;
+	var zip= document.Registration.zip.value;
+	if (zip.length ==0) return false;
+	return true;
+
+}
+
+function validateCheckBox()
+{
+	if (document.Registration.tos.checked) return true;
+
+	return false;
+}
+
+
+function doSubmit()
+{
+	if (validateText() == false)  
+	{
+		alert("Please fill all the boxes");
+		return;
+	}
+	if (validateCheckBox() == false)
+	{
+		alert("You did not agree to the TOS");
+		return;
+	}
+		alert("Your application has been sent");
+		return;
+}
+
+
+
+
+</script>
+</head>
+
+
+<body>
+<div class="mydiv">
+	<h1 style="float:left;margin-left:30px;"><a href="index.html" style="color:white">Great Fitness</a></h1>
+	<h3 style="float:right;margin-right:30px;"><a href="info.html" style="color:white">Learn more</a></h3>
+	<hr style ="clear:both">
+</div>
+
+<h2 align="center">Gym Registration</h2>
+<form name="Registration">
+	<p style="margin-left:300px;float:left;">First Name: <input name="fname" type="text"></p>
+	<p style="margin-right:400px;float:right;">Phone Number: <input name="phone" type="number" maxlength="13"></p>
+	<br/><br/><br/>
+	<p style="margin-left:300px;float:left;">Last Name: <input name="lname" type="text"></p>
+	<p style="margin-right:450px;float:right;">E-Mail: <input name="email" type="text"></p>
+	<br/><br/><br/>
+	<p style="margin-left:300px;">Address:&nbsp&nbsp&nbsp&nbsp <input name="address" type="text" size="54" ></p>
+
+	<p style="margin-left:300px;float:left;">City:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input name="city" type="text"></p>
+	<p style="margin-right:500px;float:right;">State: <input name="state" type="text"></p>
+	
+	<p style="margin-left:300px;float:left;">Postal/Zip Code: <input name="zip" type="text"></p>
+
+	<br/><br/><br/><br/><br/><br/><br/>
+	<input name="tos" type="checkbox" style="margin-left:300px;">Check here to agree to the TOS
+	<br/><br/><br/><br/>
+	<p style="margin-left:300px;"><input type="button" value="Submit" onClick="doSubmit()"></p>
+
+
+</form>
+</body>
+</html>
